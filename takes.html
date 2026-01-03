@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Diary</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: snow;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a237e;
+        }
+
+        h2 {
+            color: #1a237e;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        hr {
+            border: 1px solid blue;
+            margin: 20px 0;
+        }
+
+        .thankyou {
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: blue;
+            color: aliceblue;
+            border: none;
+            padding: 12px 20px; /* bigger for mobile taps */
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            touch-action: manipulation; /* better touch behavior */
+        }
+
+        .btn:hover {
+            background-color: red;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Diary</h1>
+    <p style="text-align: center;">By: Normand Kennieth S. Anglo</p>
+
+    <hr>
+
+    <h2>Introduction</h2>
+    <p>Hello everyone, welcome to my webpage. My name is Kennieth. I am a first-year college student taking up BSIT. This diary is where I share my experiences, thoughts, and journey as a student.</p>
+    <p>College life is full of learning, challenges, and fun experiences. Every day brings something new to explore. So come with me and let's see my story as I grow, learn, and experience college life one step at a time.</p>
+
+    <h2>Why I Chose BSIT</h2>
+    <p>I chose BSIT because I am interested in technology and computers. I enjoy learning how websites and programs work. This course helps me understand how technology can solve problems and help people.</p>
+
+    <h2>Fun Facts About Me</h2>
+    <button class="btn" data-target="funfacts">Show/Hide Fun Facts</button>
+    <ul id="funfacts" class="hidden">
+        <li>I love trying new foods with friends.</li>
+        <li>I enjoy listening to upbeat music while studying.</li>
+        <li>I like experimenting with small coding projects in my free time.</li>
+        <li>I sometimes write little notes or ideas for websites I want to build.</li>
+    </ul>
+
+    <h2>Favorite Subjects</h2>
+    <button class="btn" data-target="favorite_subject">Show/Hide Favorite Subjects</button>
+    <ul id="favorite_subject" class="hidden">
+        <li>Computer Programming</li>
+        <li>Understanding the Self</li>
+        <li>Logic and Critical Thinking</li>
+        <li>Math in the Modern World</li>
+    </ul>
+
+    <h2>Hobbies</h2>
+    <button class="btn" data-target="hobbies">Show/Hide Hobbies</button>
+    <ul id="hobbies" class="hidden">
+        <li>Listening to Music</li>
+        <li>Coding</li>
+        <li>Lifting Weights</li>
+        <li>Playing Games</li>
+        <li>Trying new Things</li>
+    </ul>
+
+    <h2>Friends</h2>
+    <p>I am thankful for my friends who support me in my college journey. They help me during hard times and make my college life more fun and meaningful.</p>
+
+    <h2>Goals</h2>
+    <p>My goal is to improve my skills in information technology, especially in programming. I want to become a better version of myself and succeed in my chosen career.</p>
+
+    <h2>College Life</h2>
+    <p>College life is a mix of learning, challenges, and new experiences. Every day, I learn something new not only in my subjects but also in life. There are times when lessons are difficult, deadlines are stressful, and managing time becomes hard.</p>
+    <p>Some challenges I face include understanding new topics, balancing schoolwork, and adjusting to college life. Even when things feel difficult, I remind myself that these challenges help me grow and become stronger.</p>
+    <p>Through patience, practice, and continuous learning, I am slowly improving my skills. Someday, I want to become a successful web developer who can create useful and meaningful websites. This journey may not be easy, but I am willing to learn, improve, and move forward step by step.</p>
+
+    <p class="thankyou">That would be all. Thank you for visiting my webpage!</p>
+
+    <script>
+        // Attach click events to all buttons after page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    const section = document.getElementById(targetId);
+                    section.classList.toggle('hidden'); // Show/hide section
+                });
+            });
+        });
+    </script>
+</body>
+</html>
